@@ -68,7 +68,13 @@ public class Client extends Thread {
                 String message;
 
                 while((message = reader.readLine()) != null) {
+                    JsonObject object = (JsonObject) new JsonParser().parse(reader.readLine());
 
+                    if(object.get("id").getAsString().equalsIgnoreCase("pipeline")) {
+
+                    } else {
+
+                    }
                 }
             } else {
                 alive = false;
